@@ -1,0 +1,27 @@
+Alphabet
+A B C Ç D E F G Ğ H I İ J K L M N O Ö P R S Ş T U Ü V Y Z
+a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
+%{C%}:c
+%{I%}
+%{D%}
+%{A%}
+%{K%}
+%{SPC%}
+%-
+;
+
+Sets
+
+Vow = A E I İ O Ö U Ü
+		a e ı i o ö u ü ;
+
+Cons = F S T K Ç Ş H P
+		f s t k ç ş h p ;
+
+
+
+Rules
+
+"C to ç"
+%{C%}:ç <=> [Cons: ] [%-: ]+ _ ;
+

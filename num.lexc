@@ -1,0 +1,8 @@
+LEXICON Num_CAT
+
+%<NOM%>: Num;
+
+LEXICON Num
+
+NumDeriv;
+Nom;
