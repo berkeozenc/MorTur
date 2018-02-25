@@ -1,7 +1,7 @@
 comp: lexCompile dropLetterCompile penultCompile doubCompile changeACompile changeICompile changeCCompile changeDCompile changeKCompile phon1 phon2 phon3 phon4 phon5 phon6 phon7 combineNnP inverse generation analyze
 
-lexCompile: words.lexc ninfl.lexc vinfl.lexc deriv.lexc num.lexc npred.lexc
-	hfst-lexc words.lexc ninfl.lexc vinfl.lexc deriv.lexc num.lexc npred.lexc -o lex.hfst
+lexCompile: words.lexc ninfl.lexc vinfl.lexc deriv.lexc num.lexc npred.lexc sngStates.lexc
+	hfst-lexc words.lexc ninfl.lexc vinfl.lexc deriv.lexc num.lexc npred.lexc sngStates.lexc -o lex.hfst
 
 dropLetterCompile: dropLetter.twol
 	hfst-twolc -R -i dropLetter.twol -o dropLetter.hfst

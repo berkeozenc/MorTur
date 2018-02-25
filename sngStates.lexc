@@ -1,0 +1,23 @@
+Multichar_Symbols
+
+%<PUNCT%>
+%<POSTP%>
+%<CONJ%>
+%<INTRJ%>
+
+LEXICON PUNCT
+
+%<PUNCT%>: # ;
+
+
+LEXICON POSTP
+
+%<POSTP%>: # ;
+
+LEXICON CONJ
+
+%<CONJ%>: # ;
+
+LEXICON INTRJ
+
+%<INTRJ%>: # ;

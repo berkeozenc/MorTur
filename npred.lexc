@@ -9,7 +9,7 @@ Multichar_Symbols
 
 %<Q%>
 
-%<Cpl%:Aor%>
+%<Cpl%:Pres%>
 %<Cpl%:Narr%>
 %<Cpl%:Past%>
 %<Cpl%:Cond%>
@@ -42,8 +42,8 @@ LEXICON Pred1
 %<Q%>:%-%{SPC%}m%{I%} Q7;
 %<Cpl%:Past%>:%-%(y%)%{D%}%{I%} Ca2;
 %<Cpl%:Narr%>:%-m%{I%}ş Ca5;
-%<Cpl%:Aor%>:%- Ca9;
-%<Cpl%:Past%>:%-%{D%}%{I%}r Ca10;
+%<Cpl%:Pres%>:%- Ca9;
+%<Cpl%:Pres%>:%-%{D%}%{I%}r Ca10;
 
 LEXICON Pred2
 
@@ -51,7 +51,7 @@ LEXICON Pred2
 %<Q%>:%-%{SPC%}m%{I%} Q7;
 %<Cpl%:Past%>:%-%(y%)%{D%}%{I%} Ca2;
 %<Cpl%:Narr%>:%-m%{I%}ş Ca5;
-%<Cpl%:Aor%>:%- Ca8;
+%<Cpl%:Pres%>:%- Ca8;
 %<Cpl%:Past%>:%-%{D%}%{I%}r Ca10;
 
 LEXICON P5
@@ -61,17 +61,17 @@ PN;
 
 LEXICON Q5
 
-%<Cpl%:Aor%>:%- Ca11;
+%<Cpl%:Pres%>:%- Ca11;
 
 LEXICON Q6
 
-%<Cpl%:Aor%>:%- Ca12;
+%<Cpl%:Pres%>:%- Ca12;
 
 LEXICON Q7
 
 %<Cpl%:Past%>:%-%(y%)%{D%}%{I%} Ca2;
 %<Cpl%:Narr%>:%-m%{I%}ş Ca3;
-%<Cpl%:Past%>:%-%{D%}%{I%}r Ca10;
+%<Cpl%:Pres%>:%-%{D%}%{I%}r Ca10;
 
 LEXICON Ca8
 
