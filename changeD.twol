@@ -8,6 +8,16 @@ a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
 %{K%}
 %{SPC%}
 %-
+%{Ph1%}
+%{Ph2%}
+%{Ph3%}
+%{Ph4%}
+%{Ph5%}
+%{Ph6%}
+%{Ph7%}
+%{Ph8%}
+%{Ph9%}
+%'
 ;
 
 Sets
@@ -16,7 +26,8 @@ Vow = A E I İ O Ö U Ü
 		a e ı i o ö u ü ;
 
 Cons = F S T K Ç Ş H P
-		f s t k ç ş h p ;
+		f s t k ç ş h p 
+		%{Ph3%} %{Ph4%} %{Ph7%} %{K%} ;
 
 
 

@@ -50,9 +50,9 @@ LEXICON Pred2
 %<Q%>:%-%{SPC%}m%{I%} Q5;
 %<Q%>:%-%{SPC%}m%{I%} Q7;
 %<Cpl%:Past%>:%-%(y%)%{D%}%{I%} Ca2;
-%<Cpl%:Narr%>:%-m%{I%}ş Ca5;
+%<Cpl%:Narr%>:%-%(y%)m%{I%}ş Ca5;
 %<Cpl%:Pres%>:%- Ca8;
-%<Cpl%:Past%>:%-%{D%}%{I%}r Ca10;
+%<Cpl%:Pres%>:%-%{D%}%{I%}r Ca10;
 
 LEXICON P5
 

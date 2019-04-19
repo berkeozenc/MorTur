@@ -25,6 +25,8 @@ Multichar_Symbols
 
 %<IsWhen%>
 
+%<NC%>
+
 %{A%}
 %{I%}
 %(%{I%}%)
@@ -42,7 +44,7 @@ LEXICON Nom'
 
 %<Num%:Pl%>:%-l%{A%}r Pl;
 %<Num%:Sg%>:%- Sg;
-%<IsWhen%>:%-%(y%)%{I%}ken Adv_CAT;
+%<IsWhen%>:%-%(y%)ken Adv_CAT;
 
 LEXICON Pl
 
@@ -53,6 +55,7 @@ LEXICON Pl
 %<Poss%:1p%>:%-%(%{I%}%)m%{I%}z Poss1LAR;
 %<Poss%:2p%>:%-%(%{I%}%)n%{I%}z Poss1LAR;
 %<Poss%:3p%>:%-%(%{I%}%)%(n%) Poss1LAR;
+%<NC%>:%-%(s%)%{I%}%(n%) NC1;
 
 LEXICON Sg
 
@@ -66,6 +69,25 @@ LEXICON Sg
 %<Poss%:No%>:%- Poss2;  
 %<Poss%:1s%>:%-%(%{I%}%)m Poss2;
 %<Poss%:2s%>:%-%(%{I%}%)n Poss2;
+%<NC%>:%-%(s%)%{I%}%(n%) NC2;
+
+
+
+LEXICON NC1
+
+%<Case%:Nom%>:%- CaseNom;
+%<Case%:Dat%>:%-%(y%)%{A%} Case3;
+%<Case%:Abl%>:%-%{D%}%{A%}n Case3;
+%<Case%:Ins%>:%-%(y%)l%{A%} Case3;
+Case;
+
+LEXICON NC2
+
+%<Case%:Nom%>:%- Case3;
+%<Case%:Dat%>:%-%(y%)%{A%} Case3;
+%<Case%:Abl%>:%-%{D%}%{A%}n Case3;
+%<Case%:Ins%>:%-%(y%)l%{A%} Case3;
+Case;
 
 LEXICON Poss1LAR
 

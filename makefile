@@ -1,8 +1,14 @@
-comp: lexCompile dropLetterCompile penultCompile doubCompile changeACompile changeICompile changeCCompile changeDCompile changeKCompile phon1 phon2 phon3 phon4 phon5 phon6 phon7 combineNnP inverse generation analyze
+comp: lexCompile IyorCompile dropNCompile dropLetterCompile penultCompile doubCompile changeACompile changeICompile changeCCompile changeDCompile changeKCompile phon1 phon1_1 phon1_2 phon2 phon3 phon4 phon5 phon6 phon7 combineNnP inverse generation analyze level1
 
 lexCompile: words.lexc ninfl.lexc vinfl.lexc deriv.lexc num.lexc npred.lexc sngStates.lexc
 	hfst-lexc words.lexc ninfl.lexc vinfl.lexc deriv.lexc num.lexc npred.lexc sngStates.lexc -o lex.hfst
 
+IyorCompile: Iyor.twol
+	hfst-twolc -R -i Iyor.twol -o Iyor.hfst
+
+dropNCompile: dropN.twol
+	hfst-twolc -R -i dropN.twol -o dropN.hfst
+	
 dropLetterCompile: dropLetter.twol
 	hfst-twolc -R -i dropLetter.twol -o dropLetter.hfst
 	
@@ -27,11 +33,17 @@ changeDCompile: changeD.twol
 changeKCompile: changeK.twol
 	hfst-twolc -R -i changeK.twol -o changeK.hfst
 
-phon1: dropLetter.hfst penult.hfst
-	hfst-compose-intersect -1 dropLetter.hfst -2 penult.hfst -o phon1.hfst
+phon1: Iyor.hfst dropN.hfst
+	hfst-compose-intersect -1 Iyor.hfst -2 dropN.hfst -o phon1.hfst
+
+phon1_1: phon1.hfst dropLetter.hfst
+	hfst-compose-intersect -1 phon1.hfst -2 dropLetter.hfst -o phon1_1.hfst
 	
-phon2: phon1.hfst doub.hfst
-	hfst-compose-intersect -1 phon1.hfst -2 doub.hfst -o phon2.hfst
+phon1_2: phon1_1.hfst penult.hfst
+	hfst-compose-intersect -1 phon1_1.hfst -2 penult.hfst -o phon1_2.hfst
+	
+phon2: phon1_2.hfst doub.hfst
+	hfst-compose-intersect -1 phon1_2.hfst -2 doub.hfst -o phon2.hfst
 
 phon3: phon2.hfst changeA.hfst
 	hfst-compose-intersect -1 phon2.hfst -2 changeA.hfst -o phon3.hfst
@@ -59,3 +71,6 @@ generation: tr.hfst
 
 analyze: tr.inv.hfst
 	hfst-fst2fst -O -i tr.inv.hfst -o analyze.ol
+
+level1: lex.hfst
+	hfst-fst2fst -O -i lex.hfst -o l1.ol

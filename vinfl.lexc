@@ -1,5 +1,7 @@
 Multichar_Symbols
 
+
+%<VS%>
 %<Actv%>
 %<Rflx%>
 %<Rcpr%>
@@ -44,142 +46,142 @@ Multichar_Symbols
 
 LEXICON DIr_Il_CAT
 
-%<VERB%>: DIr_Il;
+%<VS%>: DIr_Il;
 
 LEXICON DIr_Il
 
-%<Caus%>:%-%{D%}%{I%}r CausA ;
-%<Psv%>:%-%(%{I%}%)l Pasv ;
+%<Caus%>:%-%{D%}%{I%}r CausA_CAT ;
+%<Psv%>:%-%(%{I%}%)l Pasv_CAT ;
 : VR ;
 
 LEXICON DIr_In_CAT
 
-%<VERB%>: DIr_In;
+%<VS%>: DIr_In;
 
 LEXICON DIr_In
 
-%<Caus%>:%-%{D%}%{I%}r CausA ;
-%<Psv%>:%-%(%{I%}%)n Pasv ;
+%<Caus%>:%-%{D%}%{I%}r CausA_CAT ;
+%<Psv%>:%-%(%{I%}%)n Pasv_CAT ;
 : VR ;
 
 
 LEXICON It_Il_CAT
 
-%<VERB%>: It_Il;
+%<VS%>: It_Il;
 
 LEXICON It_Il
 
-%<Caus%>:%-%(%{I%}%)t CausB ;
-%<Psv%>:%-%(%{I%}%)l Pasv ;
+%<Caus%>:%-%(%{I%}%)t CausB_CAT ;
+%<Psv%>:%-%(%{I%}%)l Pasv_CAT ;
 : VR ;
 
 LEXICON It_In_CAT
 
-%<VERB%>: It_In;
+%<VS%>: It_In;
 
 LEXICON It_In
 
-%<Caus%>:%-%(%{I%}%)t CausB ;
-%<Psv%>:%-%(%{I%}%)n Pasv ;
+%<Caus%>:%-%(%{I%}%)t CausB_CAT ;
+%<Psv%>:%-%(%{I%}%)n Pasv_CAT ;
 : VR ;
 
 LEXICON Ir_Il_CAT
 
-%<VERB%>: Ir_Il;
+%<VS%>: Ir_Il;
 
 LEXICON Ir_Il
 
-%<Caus%>:%-%{I%}r CausA ;
-%<Psv%>:%-%(%{I%}%)l Pasv ;
+%<Caus%>:%-%{I%}r CausA_CAT ;
+%<Psv%>:%-%(%{I%}%)l Pasv_CAT ;
 : VR ;
 
 LEXICON Ir_In_CAT
 
-%<VERB%>: Ir_In;
+%<VS%>: Ir_In;
 
 LEXICON Ir_In
 
-%<Caus%>:%-%{I%}r CausA ;
-%<Psv%>:%-%(%{I%}%)n Pasv ;
+%<Caus%>:%-%{I%}r CausA_CAT ;
+%<Psv%>:%-%(%{I%}%)n Pasv_CAT ;
 : VR ;
 
 LEXICON Ar_Il_CAT
 
-%<VERB%>: Ar_Il;
+%<VS%>: Ar_Il;
 
 LEXICON Ar_Il
 
-%<Caus%>:%-%{A%}r CausA ;
-%<Psv%>:%-%(%{I%}%)l Pasv ;
+%<Caus%>:%-%{A%}r CausA_CAT ;
+%<Psv%>:%-%(%{I%}%)l Pasv_CAT ;
 : VR ;
 
 LEXICON Ar_In_CAT
 
-%<VERB%>: Ar_In;
+%<VS%>: Ar_In;
 
 LEXICON Ar_In
 
-%<Caus%>:%-%{A%}r CausA ;
-%<Psv%>:%-%(%{I%}%)n Pasv ;
+%<Caus%>:%-%{A%}r CausA_CAT ;
+%<Psv%>:%-%(%{I%}%)n Pasv_CAT ;
 : VR ;
 
 LEXICON Il_CAT
 
-%<VERB%>: Il;
+%<VS%>: Il;
 
 LEXICON Il
 
-%<Psv%>:%-%(%{I%}%)l Pasv ;
+%<Psv%>:%-%(%{I%}%)l Pasv_CAT ;
 : VR ;
 
 LEXICON In_CAT
 
-%<VERB%>: In;
+%<VS%>: In;
 
 LEXICON In
 
-%<Psv%>:%-%(%{I%}%)n Pasv ;
+%<Psv%>:%-%(%{I%}%)n Pasv_CAT ;
 : VR ;
 
 LEXICON DIr_CAT
 
-%<VERB%>: DIr;
+%<VS%>: DIr;
 
 LEXICON DIr
 
-%<Caus%>:%-d%{I%}r CausA ;
+%<Caus%>:%-d%{I%}r CausA_CAT ;
 : VR ;
 
 LEXICON It_CAT
 
-%<VERB%>: It;
+%<VS%>: It;
 
 LEXICON It
 
-%<Caus%>:%-%(%{I%}%)t CausB ;
+%<Caus%>:%-%(%{I%}%)t CausB_CAT ;
 : VR ;
 
 LEXICON Ir_CAT
 
-%<VERB%>: Ir;
+%<VS%>: Ir;
 
 LEXICON Ir
 
-%<Caus%>:%-%{I%}r CausA ;
+%<Caus%>:%-%{I%}r CausA_CAT ;
 : VR ;
 
 LEXICON Ar_CAT
 
-%<VERB%>: Ar;
+%<VS%>: Ar;
 
 LEXICON Ar
 
-%<Caus%>:%-%{A%}r CausA ;
+%<Caus%>:%-%{A%}r CausA_CAT ;
 : VR ;
 
 LEXICON NCP_CAT
 
-%<VERB%>: NCP;
+%<VS%>: NCP;
 
 LEXICON NCP
 
@@ -187,28 +189,43 @@ LEXICON NCP
 
 LEXICON VR_CAT
 
-%<VERB%>: VR;
+%<VS%>: VR;
 
 LEXICON VR
 
-%<Rflx%>:%-%(%{I%}%)n RaR;
-%<Rcpr%>:%-%(%{I%}%)ş RaR;
+%<Rflx%>:%-%(%{I%}%)n RaR_CAT;
+%<Rcpr%>:%-%(%{I%}%)ş RaR_CAT;
 %<Actv%>: App ;
 
+
+LEXICON RaR_CAT
+
+%<VS%>: RaR;
 
 
 LEXICON RaR
 
 App;
-%<Caus%>:%-%{D%}%{I%}r CausA;
-%<Pasv%>:%-%{I%}l Pasv;
+%<Caus%>:%-%{D%}%{I%}r CausA_CAT;
+%<Pasv%>:%-%{I%}l Pasv_CAT;
 
+LEXICON CausA_CAT
+
+%<VS%>: CausA;
+
+LEXICON Pasv_CAT
+
+%<VS%>: Pasv;
 
 LEXICON CausA
 
 App;
 %<Pasv%>:%-%{I%}l Pasv;
-%<Caus%>:%-%(%{I%}%)t CausB;
+%<Caus%>:%-%(%{I%}%)t CausB_CAT;
+
+LEXICON CausB_CAT
+
+%<VS%>: CausB;
 
 LEXICON CausB
 
@@ -267,12 +284,12 @@ LEXICON TAMP1
 %<Tns%:Necc%>:%-m%{A%}l%{I%} T5;
 %<Tns%:Pres%>:%-%(%{I%}%)yor T5;
 %<Tns%:Iprf%>:%-m%{A%}kt%{A%} T5;
-%<Tns%:Fut%>:%-%(y%)%{A%}c%{A%}k T5;
+%<Tns%:Fut%>:%-%(y%)%{A%}c%{A%}%{K%} T5;
 %<Tns%:Narr%>:%-m%{I%}ş T5;
 %<Tns%:Necc%>:%-m%{A%}l%{I%} T6;
 %<Tns%:Pres%>:%-%(%{I%}%)yor T6;
 %<Tns%:Iprf%>:%-m%{A%}kt%{A%} T6;
-%<Tns%:Fut%>:%-%(y%)%{A%}c%{A%}k T6;
+%<Tns%:Fut%>:%-%(y%)%{A%}c%{A%}%{K%} T6;
 %<Tns%:Narr%>:%-m%{I%}ş T7;
 TAMP1Deriv ;
 
@@ -333,8 +350,9 @@ LEXICON T4
 LEXICON T5
 
 %<Cpl%:Aor%>:%-%{D%}%{I%}r Ca7;
-%<Prsn%:1s%>:%-y%{I%}m P2;
+%<Prsn%:1s%>:%-%(y%)%{I%}m P2;
 %<Prsn%:2s%>:%-s%{I%}n P2;
+%<Prsn%:1p%>:%-%(y%)%{I%}z P2;
 %<Prsn%:3s%>:%- P2;
 %<Prsn%:1p%>:%-l%{I%}m P2;
 %<Prsn%:2p%>:%-s%{I%}n%{I%}z P2;

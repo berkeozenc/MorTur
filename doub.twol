@@ -9,6 +9,15 @@ a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
 %{SPC%}
 %{DOUB%}:0
 %-
+%{Ph1%}
+%{Ph2%}
+%{Ph3%}
+%{Ph4%}
+%{Ph5%}
+%{Ph6%}
+%{Ph7%}
+%{Ph8%}
+%{Ph9%}
 ;
 
 Sets

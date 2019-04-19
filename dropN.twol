@@ -1,0 +1,50 @@
+Alphabet
+A B C Ç D E F G Ğ H I İ J K L M N O Ö P R S Ş T U Ü V Y Z
+a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
+%{A%}
+%{I%}
+%{D%}
+%{C%}
+%{K%}
+%{SPC%}
+%{DOUB%}
+%(%{A%}%)
+%-
+%(%{I%}%)
+%(n%):n
+%(s%)
+%(y%)
+%{Ph1%}
+%{Ph2%}
+%{Ph3%}
+%{Ph4%}
+%{Ph5%}
+%{Ph6%}
+%{Ph7%}
+%{Ph8%}
+%{Ph9%}
+%'
+;
+
+Sets
+
+Vow = A E I İ O Ö U Ü
+		a e ı i o ö u ü %{Ph2%} %{Ph5%} ;
+
+Cons = B C Ç D F G Ğ H J K L M N P R S Ş T V Y Z
+		b c ç d f g ğ h j k l m n p r s ş t v y z %{DOUB%} %{D%} %{C%} %{K%} 
+		%{Ph1%} %{Ph3%} %{Ph4%} %{Ph6%} %{Ph7%} %{Ph8%} %{Ph9%} ;
+
+beforeN = B C Ç D F G Ğ H J K L M N P R S Ş T V Y Z
+			b c ç d f g ğ h j k l m n p r s ş t v y z %(n%) %{DOUB%} ;
+
+Rules
+
+"Drop n1"
+%(n%):0 <=> [beforeN: ] [%-: ]+ _ \%-: ;
+
+"Drop n2"
+%(n%):0 <=> _ [%-: ]+ [ g: | %(y%): ] [ i: | l: | m: ] [l: | %{A%}: | %{I%}: ] [%-: ]* ;
+
+"Drop n3"
+%(n%):0 <=> _ [%-: ]+ .#. ;

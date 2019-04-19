@@ -16,6 +16,16 @@ a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
 %{synÜn%}:%{I%}
 %{synIv%}:%{I%}
 %{synUv%}:%{I%}
+%{synİv%}:%{I%}
+%{Ph1%}
+%{Ph2%}
+%{Ph3%}
+%{Ph4%}
+%{Ph5%}
+%{Ph6%}
+%{Ph7%}
+%{Ph8%}
+%{Ph9%}
 ;
 
 Sets
@@ -38,9 +48,11 @@ Rules
 "Del synÜn"
 %{synÜn%}:0 <=> _ [ : ] [%-: ]* [sufVow: ] [ : ];
 
-
 "Del synIv"
 %{synIv%}:0 <=> _ [ : ] [%-: ]* [%{I%}: ] [ : ];
 
 "Del synUv"
 %{synUv%}:0 <=> _ [ : ] [%-: ]* [%{I%}: ] [ : ];
+
+"Del synİv"
+%{synİv%}:0 <=> _ [ : ] [%-: ]* [%{I%}: ] [ : ];

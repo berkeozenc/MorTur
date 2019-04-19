@@ -61,6 +61,7 @@ LEXICON NumDeriv
 
 %<Tuple%>:%-%(%{I%}%)z Nom_CAT;
 %<Ord%>:%-%(%{I%}%)nc%{I%} Nom_CAT;
+Nom_CAT;
 
 LEXICON Nom_CAT
 
@@ -114,7 +115,7 @@ LEXICON Adv
 LEXICON TAMP1Deriv
 
 %<AgtR%>:%-%(y%)%{I%}c%{I%} Nom_CAT;
-%<InfA%>:%-d%{I%}%{K%} Nom_CAT;
+%<InfA%>:%-%{D%}%{I%}%{K%} Nom_CAT;
 %<Inf1%>:%-m%{A%} Nom_CAT;
 %<Inf2%>:%-m%{A%}%{K%} Nom_CAT;
 %<AgtP%>:%-m%{I%}ş Nom_CAT;
@@ -123,12 +124,12 @@ LEXICON TAMP1Deriv
 %<AgtA%>:%-%(y%)%{A%}n Nom_CAT;
 %<AgtL%>:%-%(y%)%{A%}s%{I%} Nom_CAT;
 %<Inf3%>:%-%(y%)%{I%}ş Nom_CAT;
-%<AgtI%>:%-%(%{I%}%)%(y%)or Nom_CAT;
+%<AgtI%>:%-%(%{I%}%)yor Nom_CAT;
 %<While%>:%-%(y%)%{A%}r%{A%}%{K%} Adv_CAT;
 %<After1%>:%-%(y%)%{I%}nc%{A%} Adv_CAT;
 %<Since%>:%-%(y%)%{A%}l%{I%} Adv_CAT;
 %<Untill%>:%-%(y%)%{I%}nc%{A%}y%{A%} Adv_CAT;
-%<After2%>:%-%{I%}p Adv_CAT;
+%<After2%>:%-%(y%)%{I%}p Adv_CAT;
 %<KeepDo%>:%-%(y%)%{A%}dur VR_CAT;
 %<EasyDo%>:%-%(y%)%{I%}ver VR_CAT;
 %<AlmostDo%>:%-%(y%)%{A%}yaz VR_CAT;
@@ -138,6 +139,7 @@ LEXICON TAMP1Deriv
 LEXICON TAMP3Deriv
 
 %<AgtA%>:%-%(%{A%}%)r Nom_CAT;
+%<AgtA%>:%-%(%{I%}%)r Nom_CAT;
 %<Bfr%>:%-m%{A%}d%{A%}n Adv_CAT;
 %<KeepDo%>:%-%(y%)%{A%}dur VR_CAT;
 %<EasyDo%>:%-%(y%)%{I%}ver VR_CAT;
