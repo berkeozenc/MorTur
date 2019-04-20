@@ -37,6 +37,12 @@ LEXICON Aphos
 
 :%' Nom_CAT;
 :%' NumDeriv;
+%<NOM%>%<Num%:Sg%>%<Poss%:No%>%<%Case%:Nom%>: #;
+%<NOM%>%<Num%:Sg%>%<Poss%:No%>%<Case%:Nom%>%<PRED%>%<Cpl%:Pres%>%<Prsn%:3s%>: #;
+
+LEXICON num_end
+
+# ;
 
 LEXICON Ph1
 
