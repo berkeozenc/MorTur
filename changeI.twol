@@ -19,6 +19,10 @@ a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
 %{Ph8%}
 %{Ph9%}
 %'
+%{rEİ%}:0
+%{rEÜ%}:0
+%{rAU%}:0
+%{rAI%}:0
 ;
 
 Sets
@@ -30,16 +34,16 @@ Cons = B C Ç D F G Ğ H J K L M N P R S Ş T V Y Z
 		b c ç d f g ğ h j k l m n p r s ş t v y z %' ;
 
 flatBack = A I a ı
-			%{Ph5%} %{Ph7%} %{Ph8%} ;
+			%{Ph5%} %{Ph7%} %{Ph8%} %{rAI%} ;
 
 flatFront = E İ e i 
-			%{Ph1%} %{Ph2%} %{Ph4%} ;
+			%{Ph1%} %{Ph2%} %{Ph4%} %{rEİ%} ;
 
 roundBack = O U o u 
-			%{Ph6%} ;
+			%{Ph6%} %{rAU%} ;
 
 roundFront = Ö Ü ö ü 
-			%{Ph3%} %{Ph9%} ;
+			%{Ph3%} %{Ph9%} %{rEÜ%} ;
 
 beforeI1 = B C Ç D F G Ğ H J K L M N P R S Ş T V Y Z
 			b c ç d f g ğ h j k l m n p r s ş t v y z

@@ -23,28 +23,46 @@ a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
 %{Ph7%}
 %{Ph8%}
 %{Ph9%}
+%{rT%}
+%{rÇ%}
+%{rK%}
+%{rP%}
 %'
+%{rEİ%}
+%{rEÜ%}
+%{rAU%}
+%{rAI%}
 ;
 
 Sets
 
 Vow = A E I İ O Ö U Ü
-		a e ı i o ö u ü %{Ph2%} %{Ph5%} ;
+		a e ı i o ö u ü %{Ph2%} %{Ph5%} %{rEİ%} %{rEÜ%} %{rAU%} %{rAI%} ;
 
 Cons = B C Ç D F G Ğ H J K L M N P R S Ş T V Y Z
 		b c ç d f g ğ h j k l m n p r s ş t v y z %{DOUB%} %{D%} %{C%} %{K%} 
-		%{Ph1%} %{Ph3%} %{Ph4%} %{Ph6%} %{Ph7%} %{Ph8%} %{Ph9%} ;
+		%{Ph1%} %{Ph3%} %{Ph4%} %{Ph6%} %{Ph7%} %{Ph8%} %{Ph9%} %{rT%} %{rÇ%} %{rK%} %{rP%} %(n%) ;
 
 beforeN = B C Ç D F G Ğ H J K L M N P R S Ş T V Y Z
 			b c ç d f g ğ h j k l m n p r s ş t v y z %(n%) %{DOUB%} ;
 
 Rules
 
-"Drop n1"
-%(n%):0 <=> [beforeN: ] [%-: ]+ _ \%-: ;
 
-"Drop n2"
-%(n%):0 <=> _ [%-: ]+ [ g: | %(y%): ] [ i: | l: | m: ] [l: | %{A%}: | %{I%}: ] [%-: ]* ;
+"Drop before (y)"
+%(n%):0 <=> _ [%-: ]* [%(y%): ] [Cons: ];
 
-"Drop n3"
+"Drop before dI"
+%(n%):0 <=> _ [%-: ]* [%{D%}: ] [%{I%}: ] ;
+
+"Drop before -gil"
+%(n%):0 <=> _ [%-: ]+ [ g: ] [ i: ] [l: ] ;
+
+"Drop before space"
+%(n%):0 <=> _ [%-: ]* [%{SPC%}: ] ;
+
+"Drop after consonant when in genitive"
+%(n%):0 <=> [Cons: ] [%-: ]+ _ [%{I%}: ] [n: ] ;
+
+"Drop at the end"
 %(n%):0 <=> _ [%-: ]+ .#. ;

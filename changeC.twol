@@ -27,7 +27,7 @@ Vow = A E I İ O Ö U Ü
 
 Cons = F S T K Ç Ş H P
 		f s t k ç ş h p 
-		%{Ph3%} %{Ph4%} %{Ph7%} ;
+		%{Ph3%} %{Ph4%} %{Ph7%} %{K%} ;
 
 
 

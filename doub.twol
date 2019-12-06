@@ -18,15 +18,23 @@ a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
 %{Ph7%}
 %{Ph8%}
 %{Ph9%}
+%{rT%}
+%{rÇ%}
+%{rK%}
+%{rP%}
+%{rEİ%}
+%{rEÜ%}
+%{rAU%}
+%{rAI%}
 ;
 
 Sets
 
 Vow = A E I İ O Ö U Ü
-		a e ı i o ö u ü %{A%} %{I%} ;
+		a e ı i o ö u ü %{A%} %{I%} %{rEİ%} %{rEÜ%} %{rAU%} %{rAI%} ;
 
 Cons = B C Ç D F G Ğ H J K L M N P R S Ş T V Y Z
-		b c ç d f g ğ h j k l m n p r s ş t v y z %{D%} %{C%} %{K%} .#.;
+		b c ç d f g ğ h j k l m n p r s ş t v y z %{D%} %{C%} %{K%} .#. %{rT%} %{rÇ%} %{rK%} %{rP%};
 
 
 

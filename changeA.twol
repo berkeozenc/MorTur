@@ -17,6 +17,10 @@ a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
 %{Ph7%}
 %{Ph8%}
 %{Ph9%}
+%{rEİ%}
+%{rEÜ%}
+%{rAU%}
+%{rAI%}
 %'
 ;
 
@@ -30,11 +34,11 @@ Cons = B C Ç D F G Ğ H J K L M N P R S Ş T V Y Z
 
 Back = A I O U
 		a ı o u 
-		%{Ph5%} %{Ph6%} %{Ph7%} %{Ph8%} ;
+		%{Ph5%} %{Ph6%} %{Ph7%} %{Ph8%} %{rAU%} %{rAI%} ;
 
 Front = E İ Ö Ü 
 		e i ö ü 
-		%{Ph1%} %{Ph2%} %{Ph3%} %{Ph4%} %{Ph9%} ;
+		%{Ph1%} %{Ph2%} %{Ph3%} %{Ph4%} %{Ph9%} %{rEİ%} %{rEÜ%} ;
 
 beforeBackA = B C Ç D F G Ğ H J K L M N P R S Ş T V Y Z
 				b c ç d f g ğ h j k l m n p r s ş t v y z

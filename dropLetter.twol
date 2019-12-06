@@ -23,17 +23,25 @@ a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
 %{Ph7%}
 %{Ph8%}
 %{Ph9%}
+%{rT%}
+%{rÇ%}
+%{rK%}
+%{rP%}
+%{rEİ%}
+%{rEÜ%}
+%{rAU%}
+%{rAI%}
 %'
 ;
 
 Sets
 
 Vow = A E I İ O Ö U Ü
-		a e ı i o ö u ü %{Ph2%} %{Ph5%} %{A%} %{I%} ;
+		a e ı i o ö u ü %{Ph2%} %{Ph5%} %{A%} %{I%} %{rEİ%} %{rEÜ%} %{rAU%} %{rAI%} ;
 
 Cons = B C Ç D F G Ğ H J K L M N P R S Ş T V Y Z
 		b c ç d f g ğ h j k l m n p r s ş t v y z %{DOUB%} %{D%} %{C%}
-		%{Ph1%} %{K%} %{Ph3%} %{Ph4%} %{Ph6%} %{Ph7%} %{Ph8%} %{Ph9%} %(y%);
+		%{Ph1%} %{K%} %{Ph3%} %{Ph4%} %{Ph6%} %{Ph7%} %{Ph8%} %{Ph9%} %(y%) %{rT%} %{rÇ%} %{rK%} %{rP%};
 
 beforeN = B C Ç D F G Ğ H J K L M N P R S Ş T V Y Z
 			b c ç d f g ğ h j k l m n p r s ş t v y z %(n%) %{DOUB%} ;
@@ -42,6 +50,9 @@ Rules
 
 "Drop I"
 %(%{I%}%):0 <=> [Vow: ] [%': ]* [%-: ]+ _;
+
+"Drop I2"
+%(%{I%}%):0 <=> \[k: ] [%-: ] _ [t: ] [%-: ] ;
 
 "Drop A"
 %(%{A%}%):0 <=> [Vow: ] [%': ]* [%-: ]+ _;

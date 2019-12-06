@@ -10,13 +10,13 @@ a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
 %{SPC%}
 %{DOUB%}
 %-
-%{synIn%}:%{I%}
-%{synİn%}:%{I%}
-%{synUn%}:%{I%}
-%{synÜn%}:%{I%}
-%{synIv%}:%{I%}
-%{synUv%}:%{I%}
-%{synİv%}:%{I%}
+%{synIn%}:ı
+%{synİn%}:i
+%{synUn%}:u
+%{synÜn%}:ü
+%{synIv%}:ı
+%{synUv%}:u
+%{synİv%}:i
 %{Ph1%}
 %{Ph2%}
 %{Ph3%}
@@ -26,13 +26,21 @@ a b c ç d e f g ğ h ı i j k l m n o ö p r s ş t u ü v y z
 %{Ph7%}
 %{Ph8%}
 %{Ph9%}
+%{rT%}
+%{rÇ%}
+%{rK%}
+%{rP%}
+%{rEİ%}
+%{rEÜ%}
+%{rAU%}
+%{rAI%}
 ;
 
 Sets
 
 sufVow = %{I%} %{A%} ;
 
-
+sufI = %{I%} ;
 
 Rules
 
@@ -52,7 +60,7 @@ Rules
 %{synIv%}:0 <=> _ [ : ] [%-: ]* [%{I%}: ] [ : ];
 
 "Del synUv"
-%{synUv%}:0 <=> _ [ : ] [%-: ]* [%{I%}: ] [ : ];
+%{synUv%}:0 <=> _ [ : ] [%-: ]* [sufI: ] [ : ];
 
 "Del synİv"
 %{synİv%}:0 <=> _ [ : ] [%-: ]* [%{I%}: ] [ : ];
